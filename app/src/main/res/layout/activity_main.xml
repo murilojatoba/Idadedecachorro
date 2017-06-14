@@ -42,15 +42,14 @@
         android:layout_width="@dimen/caixa_texto"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="0dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        app:layout_constraintRight_toLeftOf="@+id/btnDescobrir"
+        android:layout_marginRight="24dp" />
 
     <Button
         android:id="@+id/btnDescobrir"
@@ -59,28 +58,28 @@
         android:layout_gravity="center"
         android:text="@string/botao_descobrir"
         tools:ignore="RtlHardcoded"
+        android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtIdade" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtIdade" />
 
     <TextView
         android:id="@+id/lblResultado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="0dp"
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
         android:textAlignment="center"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@android:color/white"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDescobrir"
         tools:ignore="TextViewEdits"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnDescobrir" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp" />
 
 </android.support.constraint.ConstraintLayout>
